@@ -4,13 +4,13 @@
 
 ## Configuration
 
-Generate a age key with:
+Generate an `age` key with:
 
 ```sh
 age-keygen -o <path to key file>
 ```
 
-If a key/key file is not specified when decrypting, age/sops will automatically look for keys in the following locations:
+If a key/key file is not specified when decrypting, `age`/`sops` will automatically look for keys in the following locations:
 
 - macOS: `$HOME/Library/Application Support/sops/age/keys.txt`
 - linux: `$XDG_CONFIG_HOME/sops/age/keys.txt`

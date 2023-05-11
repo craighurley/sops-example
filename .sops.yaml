@@ -3,11 +3,8 @@ creation_rules:
     unencrypted_regex: "^(url|username)$"
     age: >-
       age1hrpdkvj7yh4clpxnjzmecwsdgs8kwfa9xjxq2j99ss9ca8c79qushjxled
-  - path_regex: test\.json$
+  - path_regex: test\.(json|yaml)$
     unencrypted_regex: "^(url|username)$"
     age: >-
-      age1hrpdkvj7yh4clpxnjzmecwsdgs8kwfa9xjxq2j99ss9ca8c79qushjxled
-  - path_regex: test\.yaml$
-    unencrypted_regex: "^(url|username)$"
-    age: >-
-      age1hrpdkvj7yh4clpxnjzmecwsdgs8kwfa9xjxq2j99ss9ca8c79qushjxled
+      age1hrpdkvj7yh4clpxnjzmecwsdgs8kwfa9xjxq2j99ss9ca8c79qushjxled,
+      age1w9w3j62j9l2drjxjq00rw77zkfhmqvgtxk78ws7dulcdju53meus7ed84s

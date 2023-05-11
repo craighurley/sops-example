@@ -1,4 +1,4 @@
-# sops-test
+# sops-example
 
 <https://github.com/mozilla/sops>
 
@@ -16,7 +16,7 @@ If a key/key file is not specified when decrypting, `age`/`sops` will automatica
 - linux: `$XDG_CONFIG_HOME/sops/age/keys.txt`
 - Windows: `%AppData%\sops\age\keys.txt`
 
-Alternatively, you can specify the location of the key file manually by setting the environment variable `SOPS_AGE_KEY_FILE`
+Alternatively, you can specify the location of the key file manually by setting the environment variable `SOPS_AGE_KEY_FILE`.
 
 ## Example commands
 

@@ -2,8 +2,8 @@
 
 set -e
 
-sops -e --output sops.test.env test.env
-sops -e --output sops.test.json test.json
-sops -e --output sops.test.yaml test.yaml
+sops -e test.env > sops.test.env
+sops -e test.json > sops.test.json
+sops -e test.yaml > sops.test.yaml
 
 exit 0

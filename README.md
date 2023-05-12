@@ -18,18 +18,18 @@ If a key/key file is not specified when decrypting, `sops` will automatically lo
 
 Alternatively, you can specify the location of the `age` key file manually by setting the environment variable `SOPS_AGE_KEY_FILE`.
 
-## Example commands
+## Example Commands
 
 Encrypt `test.env` and save as `sops.test.env`:
 
 ```sh
-sops -e --output sops.test.env test.env
+sops -e test.env > sops.test.env
 ```
 
 Decrypt `sops.test.env` and save as `test.env`:
 
 ```sh
-sops -d --output test.env sops.test.env
+sops -d sops.test.env
 ```
 
 Decrypt `sops.test.env` and extract a specific value, e.g. `password`:
@@ -38,6 +38,18 @@ Decrypt `sops.test.env` and extract a specific value, e.g. `password`:
 sops -d --extract '["password"]' sops.test.env
 ```
 
-## WARNING
+Decrypt `sops.test.env` to a temporary file and make it's contents available for the duration of a child process:
+
+```sh
+sops exec-file sops.test.env 'wc -l {}'
+```
+
+Decrypt `sops.test.env` into the environment of a child process:
+
+```sh
+sops exec-env sops.test.env 'echo $username/$password'
+```
+
+## Warning
 
 Don't commit unencrypted secrets to git.  Think ahead and use `.gitignore`.
